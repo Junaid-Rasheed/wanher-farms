@@ -1,4 +1,3 @@
-
 import { ArrowRight, Sprout } from "lucide-react";
 
 const insights = [
@@ -6,38 +5,32 @@ const insights = [
     id: 1,
     title: "Maintaining Quality Consistency in Bulk Commodities",
     date: "September 14, 2024",
-    image:
-      "https://images.pexels.com/photos/3721540/pexels-photo-3721540.jpeg?auto=compress&cs=tinysrgb&w=800",
+    image: "/Home/j1.png",
   },
   {
     id: 2,
     title: "From Field to Flour, The Effort Behind Every Bag",
     date: "September 14, 2024",
-    image:
-      "https://images.pexels.com/photos/1574260/pexels-photo-1574260.jpeg?auto=compress&cs=tinysrgb&w=800",
+    image: "/Home/j2.png",
   },
   {
     id: 3,
     title: "How Procurement Integrity Builds Market Trust",
     date: "September 14, 2024",
-    image:
-      "https://images.pexels.com/photos/1450736/pexels-photo-1450736.jpeg?auto=compress&cs=tinysrgb&w=800",
+    image: "/Home/j3.png",
   },
   {
     id: 4,
     title: "How Procurement Integrity Builds Market Trust",
     date: "September 14, 2024",
-    image:
-      "https://images.pexels.com/photos/3725515/pexels-photo-3725515.jpeg?auto=compress&cs=tinysrgb&w=800",
+    image: "/Home/j4.png",
   },
   {
     id: 5,
     title: "Sustainability in Pakistan's Food Sector",
     date: "September 14, 2024",
-    image:
-      "https://images.pexels.com/photos/5632399/pexels-photo-5632399.jpeg?auto=compress&cs=tinysrgb&w=800",
+    image: "/Home/j5.png",
   },
-
 ];
 
 export function Insights() {
@@ -50,60 +43,58 @@ export function Insights() {
           <span className="text-sm font-medium">Insights</span>
         </div>
 
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-6">
+        <h2 className="text-4xl md:text-5xl font-semibold text-center mb-6">
           Inside Wanher Farms
         </h2>
 
-        <p className="text-center text-gray-700 max-w-4xl mx-auto mb-16 leading-relaxed">
-          At Wanher Farms, we handle core agricultural commodities that form the backbone
-          of Pakistan's food economy. Each product reflects our rigorous standards of
-          procurement, production, and quality assurance.
+        <p className="text-center text-gray-700 max-w-3xl mx-auto mb-16 leading-relaxed">
+          At Wanher Farms, we handle core agricultural commodities that form the
+          backbone of Pakistan's food economy. Each product reflects our
+          rigorous standards of procurement, production, and quality assurance.
         </p>
 
-        {/* GRID EXACT LIKE IMAGE 1 */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12 items-stretch">
-          {insights.map((insight, index) => {
-            const isFeatured = index === 0;
+        {/* GRID: featured left, two-column stack on right like Image 1 */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
+          {/* LEFT FEATURE CARD — 1/3 width, tall */}
+          <div className="lg:col-span-1 lg:row-span-2 lg:h-[720px] relative rounded-[24px] overflow-hidden group shadow-xl">
+            <img
+              src={insights[0].image}
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              alt={insights[0].title}
+            />
 
-            return (
+
+            <div className="absolute bottom-0 left-0 p-4">
+              <h3 className="text-2xl font-semibold text-white">
+                {insights[0].title}
+              </h3>
+              <p className="text-yellow-300 my-2 text-sm">{insights[0].date}</p>
+            </div>
+          </div>
+
+          {/* RIGHT SIDE — 2/3 width, 2×2 grid that matches left card height */}
+          <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6 auto-rows-fr h-full lg:h-[720px]">
+            {insights.slice(1).map((insight) => (
               <div
                 key={insight.id}
-                className={`relative rounded-[24px] overflow-hidden group cursor-pointer shadow-lg transition-all 
-                
-                ${isFeatured ? "lg:row-span-2 min-h-[520px]" : "h-64"}`}
+                className="relative h-full rounded-[20px] overflow-hidden group shadow-lg"
               >
-                {/* IMAGE */}
                 <img
                   src={insight.image}
                   alt={insight.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
 
-                {/* OVERLAY GRADIENT */}
-                <div className="absolute inset-0">
-                  {/* Bottom fade (greenish) */}
-                  <div className="absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-t from-emerald-900/80 to-transparent"></div>
 
-                  {/* Slight dark layer */}
-                  <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-all"></div>
-                </div>
-
-                {/* TEXT ON BOTTOM LEFT */}
-                <div className="absolute bottom-0 left-0 p-6">
-                  <h3
-                    className={`font-bold text-white drop-shadow-md ${
-                      isFeatured ? "text-2xl md:text-3xl" : "text-lg"
-                    }`}
-                  >
+                <div className="absolute bottom-0 left-0 p-5">
+                  <h3 className="text-white text-2xl font-semibold leading-snug">
                     {insight.title}
                   </h3>
-                  <p className="text-yellow-300 text-sm mt-2 drop-shadow-sm">
-                    {insight.date}
-                  </p>
+                  <p className="text-yellow-300 text-sm my-2">{insight.date}</p>
                 </div>
               </div>
-            );
-          })}
+            ))}
+          </div>
         </div>
 
         {/* BUTTON */}
