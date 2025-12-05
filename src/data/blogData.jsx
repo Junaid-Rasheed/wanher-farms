@@ -8,8 +8,9 @@ const blogData = [
 
     excerpt:
       "A look at our journey from farms to finished flour — quality checks, milling, and distribution.",
-    img: "/blog/field-flour-hero.jpg",
-    inlineImg: "/blog/irrigation.jpg",
+    img: "/Home/j1.png",           // <-- use public path
+        inlineImg: "/Home/j2.png",           // <-- use public path
+
     secondImg: "/blog/wheat-hand.jpg",
     content: `
       <p>Wanher Farms works closely with local farmers to ensure the best wheat is procured. We follow strict guidelines for harvest timing and post-harvest handling to preserve quality.</p>
@@ -43,8 +44,9 @@ const blogData = [
     date: "September 14, 2024",
     excerpt:
       "Why stone-ground atta remains the preferred choice for nutrition-conscious households.",
-    img: "/blog/chakki-atta-hero.jpg",
-    inlineImg: "/blog/chakki-mill.jpg",
+    img: "/Home/j2.png",           // <-- use public path
+        inlineImg: "/Home/j4.png",           // <-- use public path
+
     secondImg: "/blog/atta-bags.jpg",
     content: `
       <p>Chakki atta, produced using traditional stone milling, retains bran and germ which preserves fiber and micronutrients essential for nutrition.</p>
@@ -73,8 +75,9 @@ const blogData = [
     date: "September 14, 2024",
     excerpt:
       "How sustainable farming and traceability are reshaping the food supply chain.",
-    img: "/blog/sustainability-hero.jpg",
-    inlineImg: "/blog/sustainable-farm.jpg",
+    img: "/Home/j3.png",           // <-- use public path
+        inlineImg: "/Home/j1.png",           // <-- use public path
+
     secondImg: "/blog/sustainability-2.jpg",
     content: `
       <p>Sustainability starts at the farm level: water-smart irrigation, soil health programs and regenerative practices are core to our approach.</p>
@@ -102,8 +105,9 @@ const blogData = [
       heading: "Smarter decisions. Healthier crops. Greater yields.",
 
     excerpt: "Our procurement practices that promote fairness and traceability.",
-    img: "/blog/procurement-1-hero.jpg",
-    inlineImg: "/blog/procurement-warehouse.jpg",
+    img: "/Home/j4.png",           // <-- use public path
+   
+       inlineImg: "/Home/j5.png",           // <-- use public path
     secondImg: "/blog/procurement-2.jpg",
     content: `
       <p>Traceability and fair procurement protect both farmer and buyer. Our processes include grading at origin, electronic receipts, and secure payments.</p>
@@ -129,8 +133,8 @@ const blogData = [
     title: "How Procurement Integrity Builds Market Trust (Part 2)",
     date: "September 14, 2024",
     excerpt: "Continuation: logistics, storage and standards.",
-    img: "/blog/procurement-2-hero.jpg",
-    inlineImg: "/blog/storage-rack.jpg",
+    img: "/Home/j5.png",           // <-- use public path
+        inlineImg: "/Home/j2.png",           // <-- use public path
     secondImg: "/blog/packaging.jpg",
     content: `
       <p>In part two, we cover storage, logistics and consumer-grade packaging that ensures product safety and traceability all the way to the shelf.</p>

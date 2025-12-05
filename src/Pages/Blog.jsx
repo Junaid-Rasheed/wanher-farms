@@ -4,20 +4,20 @@ import { Link } from "react-router-dom";
 import blogData from "../data/blogData";
 
 export default function Blog() {
+  console.log("first",blogData)
   return (
-    <div className="min-h-screen bg-white text-gray-900">
+    <div className="min-h-screen bg-[#f4f2ef] text-gray-900">
       {/* HERO */}
  
             <section
         className="relative w-full h-[60vh] md:h-[72vh] flex items-center"
         style={{
-          backgroundImage: "url('/hero-bg.jpg')",
+          backgroundImage: "url('/Blog/hero.png')",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
       >
         {/* green glass overlay to match the reference */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[#053806]/85 via-[#083f08]/55 to-transparent"></div>
 
         <div className="relative max-w-6xl mx-auto w-full px-6">
           <div className="mt-12 md:mt-20 flex items-start">

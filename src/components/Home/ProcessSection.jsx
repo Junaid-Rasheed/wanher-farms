@@ -41,7 +41,7 @@ export default function ProcessSection() {
               <div className="absolute inset-0 "></div>
 
               <div className="absolute bottom-6 left-6 right-6 text-white">
-                <h3 className="text-2xl font-bold mb-2">Procurement</h3>
+                <h3 className="text-2xl font-semibold mb-2">Procurement</h3>
                 <p className="text-sm">
                   Our journey begins in the field, with trusted local farmers
                   and growers. We source crops through direct partnerships,
@@ -59,7 +59,7 @@ export default function ProcessSection() {
               <div className="absolute inset-0 "></div>
 
               <div className="absolute bottom-6 left-6 right-6 text-white">
-                <h3 className="text-2xl font-bold mb-2">Production</h3>
+                <h3 className="text-2xl font-semibold mb-2">Production</h3>
                 <p className="text-sm  ">
                   Equipped with state-of-the-art milling, cleaning, and
                   grading facilities, Wanher Farms ensures every commodity
@@ -77,7 +77,7 @@ export default function ProcessSection() {
               <div className="absolute inset-0 "></div>
 
               <div className="absolute bottom-6 left-6 right-6 text-white">
-                <h3 className="text-2xl font-bold mb-2">Quality Assurance</h3>
+                <h3 className="text-2xl font-semibold mb-2">Quality Assurance</h3>
                 <p className="text-sm ">
                   Every batch undergoes multi-stage testing, from moisture and
                   purity checks to nutritional profiling ensuring excellence.
@@ -94,7 +94,7 @@ export default function ProcessSection() {
               <div className="absolute inset-0 "></div>
 
               <div className="absolute bottom-6 left-6 right-6 text-white">
-                <h3 className="text-2xl font-bold mb-2">Distribution</h3>
+                <h3 className="text-2xl font-semibold mb-2">Distribution</h3>
                 <p className="text-sm ">
                   With a robust logistics network, we ensure timely delivery
                   across Pakistan and selected export regions.

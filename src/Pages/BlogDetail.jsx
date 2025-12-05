@@ -41,7 +41,7 @@ export default function BlogDetail() {
     <article className="min-h-screen bg-white text-gray-900">
       {/* HERO */}
       <header
-        className="relative w-full h-[42vh] md:h-[50vh] lg:h-[60vh] flex items-end pb-16"
+        className="relative w-full h-[60vh] md:h-[72vh] flex items-center"
         style={{
           backgroundImage: `url('${post.img}')`,
           backgroundSize: "cover",
@@ -50,9 +50,9 @@ export default function BlogDetail() {
       >
         <div className="absolute inset-0 bg-gradient-to-r from-[#073806]/92 via-[#0b3f0b]/45 to-transparent"></div>
 
-        <div className="relative max-w-7xl mx-auto px-6">
+        <div className="relative max-w-6xl mx-auto w-full px-6">
           <p className="text-sm text-white/90 mb-2">{post.date}</p>
-          <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-extrabold max-w-3xl leading-tight">
+          <h1 className="text-white text-5xl md:text-6xl font-extrabold leading-tight">
             {post.title}
           </h1>
         </div>
@@ -62,13 +62,12 @@ export default function BlogDetail() {
       <main className="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 lg:grid-cols-3 gap-12">
         {/* MAIN ARTICLE */}
         <div className="lg:col-span-2">
-      {/* Dynamic Top Heading */}
-{post.heading && (
-  <h2 className="text-3xl md:text-4xl font-bold leading-tight mb-6 text-gray-900">
-    {post.heading}
-  </h2>
-)}
-
+          {/* Dynamic Top Heading */}
+          {post.heading && (
+            <h2 className="text-3xl md:text-4xl font-bold leading-tight mb-6 text-gray-900">
+              {post.heading}
+            </h2>
+          )}
 
           <div
             className="space-y-6 text-gray-700 text-[15px] leading-relaxed"
@@ -84,16 +83,18 @@ export default function BlogDetail() {
             ) : (
               <>
                 <p>
-                  Our Precision Farming solution empowers growers to monitor, plan,
-                  and act with pinpoint accuracy, leading to improved productivity,
-                  resource efficiency, and long-term sustainability.
+                  Our Precision Farming solution empowers growers to monitor,
+                  plan, and act with pinpoint accuracy, leading to improved
+                  productivity, resource efficiency, and long-term
+                  sustainability.
                 </p>
 
                 <p>
-                  Precision farming is at the heart of the agricultural transformation we're driving.
-                  By combining technology, data, and deep agronomic insight, we help farmers manage
-                  their fields at a micro level — making every seed, drop of water, and hour of labor
-                  more effective than ever before.
+                  Precision farming is at the heart of the agricultural
+                  transformation we're driving. By combining technology, data,
+                  and deep agronomic insight, we help farmers manage their
+                  fields at a micro level — making every seed, drop of water,
+                  and hour of labor more effective than ever before.
                 </p>
               </>
             )}
@@ -102,8 +103,8 @@ export default function BlogDetail() {
           {/* inline image */}
           <div className="mt-10 rounded-xl overflow-hidden">
             <img
-              src={post.inlineImg || "/blog/irrigation.jpg"}
-              className="w-full h-auto object-cover"
+              src={post.img || "/blog/irrigation.jpg"}
+              className="w-full h-52 object-cover"
               alt="article inline"
             />
           </div>
@@ -130,8 +131,8 @@ export default function BlogDetail() {
 
           <div className="mt-10 rounded-xl overflow-hidden">
             <img
-              src={post.secondImg || "/blog/wheat-hand.jpg"}
-              className="w-full h-auto object-cover"
+              src={post.inlineImg || "/blog/wheat-hand.jpg"}
+              className="w-full h-52 object-cover"
               alt="article second"
             />
           </div>
@@ -148,7 +149,7 @@ export default function BlogDetail() {
           ) : null}
 
           {/* Prev / Next */}
-          <div className="mt-16 flex items-center gap-4">
+          <div className="mt-16 flex items-center justify-center gap-4">
             <button
               onClick={handlePrev}
               className="flex items-center gap-2 px-6 py-3 border border-gray-300 rounded-full text-sm"
