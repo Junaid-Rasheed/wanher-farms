@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { Sprout, ChevronDown } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState } from "react";
+import { Sprout, ChevronDown } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 /**
  * FAQ component with two layout variants:
@@ -46,13 +46,13 @@ const faqs = [
   },
 ];
 
-export function FAQ({ layout = 'twoThirds' }) {
+export function FAQ({ layout = "twoThirds" }) {
   // layout: 'twoThirds' | 'half'
   const [openId, setOpenId] = useState(1);
 
-  const isHalf = layout === 'half';
-  const leftClass = isHalf ? 'md:w-1/2' : 'md:w-1/3';
-  const rightClass = isHalf ? 'md:w-1/2' : 'md:w-2/3';
+  const isHalf = layout === "half";
+  const leftClass = isHalf ? "md:w-1/2" : "md:w-1/3";
+  const rightClass = isHalf ? "md:w-1/2" : "md:w-2/3";
 
   return (
     <section className="py-20 px-6 md:px-12 lg:px-24 bg-white">
@@ -68,10 +68,9 @@ export function FAQ({ layout = 'twoThirds' }) {
             <h2 className="text-4xl  font-semibold leading-tight">
               Frequently Asked Questions
             </h2>
-
           </div>
 
-          <div className={`${rightClass} space-y-6 pl-20`}>
+<div className={`${rightClass} space-y-6 pl-0 md:pl-20`}>
             {faqs.map((faq) => {
               const isOpen = openId === faq.id;
               return (
@@ -92,7 +91,11 @@ export function FAQ({ layout = 'twoThirds' }) {
                     <motion.span
                       aria-hidden="true"
                       animate={{ rotate: isOpen ? 180 : 0 }}
-                      transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+                      transition={{
+                        type: "spring",
+                        stiffness: 300,
+                        damping: 20,
+                      }}
                       className="flex-shrink-0"
                     >
                       <ChevronDown className="w-5 h-5 text-gray-600" />
@@ -107,10 +110,10 @@ export function FAQ({ layout = 'twoThirds' }) {
                         role="region"
                         aria-labelledby={`faq-button-${faq.id}`}
                         initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: 'auto', opacity: 1 }}
+                        animate={{ height: "auto", opacity: 1 }}
                         exit={{ height: 0, opacity: 0 }}
-                        transition={{ duration: 0.28, ease: 'easeInOut' }}
-                        style={{ overflow: 'hidden' }}
+                        transition={{ duration: 0.28, ease: "easeInOut" }}
+                        style={{ overflow: "hidden" }}
                         className="text-gray-700 leading-relaxed"
                       >
                         <div className="py-4 px-0">{faq.answer}</div>

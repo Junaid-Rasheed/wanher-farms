@@ -14,7 +14,7 @@ import { Link } from "react-router-dom";
 import ProcessSection from "../components/Home/ProcessSection";
 import TestimonialsGrid from "../components/About/TestimonialsGrid";
 import HistorySection from "../components/About/HistorySection";
-import QualitySection from '../components/Home/QualitySection'
+import QualitySection from "../components/Home/QualitySection";
 
 const stats = [
   { value: "98%", label: "On-time delivery rate", icon: Clock },
@@ -146,27 +146,28 @@ export default function About() {
           {/* Dark overlay */}
 
           {/* Content */}
-          <div className="relative p-12 text-white text-center max-w-4xl mx-auto">
-            <p className="text-sm uppercase tracking-widest opacity-90">
+          <div className="relative p-4 sm:p-10 md:p-12 text-white text-center max-w-4xl mx-auto">
+            <p className="text-xs sm:text-sm uppercase tracking-widest opacity-90">
               * What We Do
             </p>
 
-            <h2 className="text-2xl md:text-4xl font-semibold mt-4">
+            <h2 className="text-xl sm:text-2xl md:text-4xl font-semibold mt-3 sm:mt-4 leading-snug">
               We are a team of agronomists,
-              <br />
+              <br className="hidden sm:block" />
               technologists, sustainability experts.
             </h2>
 
-            <p className="mt-4 text-sm  text-white/90 leading-relaxed max-w-2xl mx-auto">
+            <p className="mt-4 text-xs sm:text-sm text-white/90 leading-relaxed max-w-2xl mx-auto">
               At Wanher Farms, we handle core agricultural commodities that form
               the backbone of Pakistan’s food economy. Each product reflects our
               rigorous standards of procurement, production, and quality
               assurance.
             </p>
 
-            <div className="mt-8">
-              <button className="inline-flex items-center gap-3 bg-[#1f6306] hover:bg-[#016630] px-5 py-2 rounded-full font-medium shadow">
-                Lets work together <ArrowRight className="w-4 h-4" />
+            <div className="mt-6 sm:mt-8">
+              <button className="inline-flex items-center gap-2 sm:gap-3 bg-[#1f6306] hover:bg-[#016630] px-4 sm:px-5 py-2 sm:py-2.5 rounded-full font-medium shadow">
+                Let's work together{" "}
+                <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
               </button>
             </div>
           </div>
@@ -186,7 +187,7 @@ export default function About() {
 
       <HistorySection />
       {/* COMMITMENT HERO */}
-<QualitySection />
+      <QualitySection />
     </div>
   );
 }

@@ -52,7 +52,7 @@ export default function BlogDetail() {
 
         <div className="relative max-w-6xl mx-auto w-full px-6">
           <p className="text-sm text-white/90 mb-2">{post.date}</p>
-          <h1 className="text-white text-5xl md:text-6xl font-extrabold leading-tight">
+          <h1 className="text-white text-3xl md:text-6xl font-extrabold leading-tight">
             {post.title}
           </h1>
         </div>

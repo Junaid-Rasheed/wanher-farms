@@ -24,7 +24,7 @@ export default function HeroSection() {
         <div className="flex flex-wrap gap-4 py-4">
           <a
             href="/product"
-            className="bg-[#1f6306] text-white px-8 rounded-full font-medium hover:bg-green-800 transition-all flex items-center gap-2 text-sm inline-flex"
+            className="bg-[#1f6306] text-white px-8 py-3 rounded-full font-medium hover:bg-green-800 transition-all flex items-center gap-2 text-sm inline-flex"
           >
             Explore Our Business <ArrowRight className="w-4 h-4" />
           </a>

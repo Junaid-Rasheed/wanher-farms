@@ -29,11 +29,11 @@ export function Insights() {
           <span className="text-sm font-medium">Insights</span>
         </div>
 
-        <h2 className="text-4xl md:text-5xl font-semibold text-center mb-6">
+        <h2 className="text-4xl md:text-5xl font-semibold text-start sm:text-center mb-6">
           Inside Wanher Farms
         </h2>
 
-        <p className="text-center text-gray-700 max-w-3xl mx-auto mb-16 leading-relaxed">
+        <p className="text-center text-gray-700 max-w-3xl mx-auto mb-16 leading-relaxed text-start sm:text-center">
           At Wanher Farms, we handle core agricultural commodities that form the
           backbone of Pakistan's food economy. Each product reflects our
           rigorous standards of procurement, production, and quality assurance.

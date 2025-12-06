@@ -14,10 +14,10 @@ export default function ProductsSection() {
           Products & Business Segments
         </h2>
 
-        <p className="text-center text-green-100 max-w-4xl mx-auto mb-16 leading-relaxed">
+        <p className="text-center text-green-100 max-w-3xl mx-auto mb-16 leading-relaxed">
           At Wanher Farms, we handle core agricultural commodities that form
           the backbone of Pakistan's food economy.
-          <br /> Each product reflects our rigorous standards of procurement,
+       Each product reflects our rigorous standards of procurement,
           production, and quality assurance.
         </p>
 
