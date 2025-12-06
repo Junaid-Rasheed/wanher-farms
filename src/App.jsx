@@ -9,6 +9,7 @@ import { Footer } from "./components/Footer/Footer";
 import About from "./Pages/About";
 import Blog from "./Pages/Blog";
 import BlogDetail from "./Pages/BlogDetail";
+import Contactus from "./Pages/Contactus";
 
 function Layout() {
   return (
@@ -27,11 +28,12 @@ function App() {
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
           <Route path="/product" element={<Product />} />
+          <Route path="/product/:slug" element={<ProductDetail />} />
           <Route path="/about" element={<About />} />
           <Route path="/blogs" element={<Blog />} />
-<Route path="/blog/:slug" element={<BlogDetail />} />
+          <Route path="/blog/:slug" element={<BlogDetail />} />
+          <Route path="/contact" element={<Contactus />} />
 
-          <Route path="/product/:slug" element={<ProductDetail />} />
           {/* Add more pages here */}
         </Route>
       </Routes>

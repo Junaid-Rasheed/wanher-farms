@@ -1,6 +1,6 @@
 import { Menu, X, ArrowRight } from "lucide-react";
 import { useState, useEffect } from "react";
-
+  
 export default function Header() {
   const [open, setOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -18,7 +18,9 @@ export default function Header() {
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-2 backdrop-blur-xl rounded-b-lg">
         {/* Logo */}
         <div className="flex items-center gap-2">
+          <a href='/'>
           <img src="/logo3.png" alt="logo" className="h-16 w-16 object-contain" />
+          </a>
         </div>
 
         {/* Desktop Menu */}

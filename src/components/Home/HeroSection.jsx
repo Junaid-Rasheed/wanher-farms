@@ -13,16 +13,15 @@ export default function HeroSection() {
         </div>
 
         <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 max-w-2xl tracking-wide">
-          Delivering <br /> Quality that <br />
-          Speaks for Itself.
+          Welcome to Wanher Farms
         </h1>
 
-        <p className="text-white/90 text-sm max-w-md mb-10 leading-relaxed">
-          Wanher Farms is a semi-integrated supply chain agribusiness
-          dedicated to procuring, producing, packaging, and supplying
-          high-quality food commodities, including eggs and wheat for flour.
+        <p className="mt-6 text-white/90 text-sm md:text-base max-w-xl">
+          Wanher Farms is a semi-hybrid supply chain agribusiness dedicated to
+          procuring, producing, packaging, and supplying high-quality food
+          commodities, including eggs and wheat for flour.
         </p>
-        <div className="flex flex-wrap gap-4">
+        <div className="flex flex-wrap gap-4 py-4">
           <a
             href="/product"
             className="bg-[#1f6306] text-white px-8 rounded-full font-medium hover:bg-green-800 transition-all flex items-center gap-2 text-sm inline-flex"
