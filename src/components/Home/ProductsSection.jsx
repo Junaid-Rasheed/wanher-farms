@@ -6,7 +6,7 @@ export default function ProductsSection() {
     <section className="py-20 px-6 md:px-12 lg:px-24 bg-[#1f6306]">
       <div className="max-w-7xl mx-auto">
         <div className="flex items-center justify-center gap-2 text-green-100 mb-6">
-          <Sprout className="w-5 h-5" />
+          <img src="/icon.png" />
           <span className="text-sm font-medium">What We Do</span>
         </div>
 
@@ -45,7 +45,7 @@ export default function ProductsSection() {
           <div className="rounded-2xl overflow-hidden group cursor-pointer transform transition-all hover:scale-105 relative">
             <div className="h-[28rem] overflow-hidden">
               <img
-                src="https://images.pexels.com/photos/1556707/pexels-photo-1556707.jpeg?auto=compress&cs=tinysrgb&w=600"
+                src="/Home/h2.png"
                 alt="Eggs"
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
               />
@@ -63,7 +63,7 @@ export default function ProductsSection() {
           <div className="rounded-2xl overflow-hidden group cursor-pointer transform transition-all hover:scale-105 relative">
             <div className="h-[28rem] overflow-hidden">
               <img
-                src="https://images.pexels.com/photos/1313643/pexels-photo-1313643.jpeg?auto=compress&cs=tinysrgb&w=600"
+                src="/Home/h3.png"
                 alt="Pulses"
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
               />
@@ -81,7 +81,7 @@ export default function ProductsSection() {
           <div className="rounded-2xl overflow-hidden group cursor-pointer transform transition-all hover:scale-105 relative">
             <div className="h-[28rem] overflow-hidden">
               <img
-                src="https://images.pexels.com/photos/265216/pexels-photo-265216.jpeg?auto=compress&cs=tinysrgb&w=600"
+                src="/Home/h4.png"
                 alt="Wheat"
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
               />
@@ -98,9 +98,11 @@ export default function ProductsSection() {
         </div>
 
         <div className="flex justify-center">
-          <button className="border-2 border-yellow-400 text-yellow-200 px-8 py-3 rounded-full font-medium hover:bg-yellow-400/10 transition-all flex items-center gap-2">
+        <a href="/product">
+           <button className="border-2 border-yellow-400 text-yellow-200 px-8 py-3 rounded-full font-medium hover:bg-yellow-400/10 transition-all flex items-center gap-2">
             See all products <ArrowRight className="w-4 h-4" />
           </button>
+          </a> 
         </div>
       </div>
     </section>

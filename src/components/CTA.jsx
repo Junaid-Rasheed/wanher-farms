@@ -39,10 +39,10 @@ Sent from website contact form.`
 
   return (
     <section className="py-20 px-6 bg-[#f4f2ef]">
-      <div className="mx-2 md:mx-20">
+      <div className="max-w-7xl mx-auto">
         {/* Top Label */}
         <div className="flex items-center gap-2 text-gray-700 mb-6">
-          <Sprout className="w-4 h-4" />
+          <img src="/iconb.png" />
           <span className="text-sm font-medium">Become our partner</span>
         </div>
 

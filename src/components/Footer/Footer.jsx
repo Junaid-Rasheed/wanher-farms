@@ -22,24 +22,22 @@ export function Footer() {
 
       <footer className="bg-[#1f6306] text-white">
         <div className="mx-auto px-6 md:px-12 lg:px-24 py-6">
-          {/* Top three columns: stack on mobile, three columns on md+ */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8 pb-4 relative">
+          {/* Top three columns - NOW 3 in a row even on small devices */}
+          <div className="grid grid-cols-3 md:grid-cols-3 gap-4 md:gap-8 mb-8 pb-4 relative text-center">
             {/* LOCATION */}
             <div className="flex flex-col justify-between items-center min-h-[180px]">
-              {/* thin line above (matches image) */}
               <div className="w-full hidden md:block border-t border-green-700 mb-4" />
 
               <h3 className="text-xs font-semibold uppercase tracking-widest text-white mb-0 mt-2">
                 Location
               </h3>
 
-              <p className="text-sm text-green-100 leading-relaxed text-center self-center mb-2">
+              <p className="text-xs sm:text-sm text-green-100 leading-relaxed text-center self-center mb-2">
                 Inc Plot no 11, Wanherfarms pvt ltd,
-                <br />
+                <br className="hidden sm:block" />
                 Main Rawat industrial Estate.
               </p>
 
-              {/* thin line below (desktop only) */}
               <div className="w-full hidden md:block border-t border-green-700 mt-4" />
             </div>
 
@@ -48,7 +46,7 @@ export function Footer() {
               <img
                 src="/logo2.png"
                 alt="Wanher Farms logo"
-                className="w-40 md:w-56 h-auto"
+                className="w-24 md:w-56 h-auto"
               />
             </div>
 
@@ -60,18 +58,20 @@ export function Footer() {
                 Contact
               </h3>
 
-              <div className="text-sm text-green-100 text-center mb-2 space-y-1">
-                <p>051-6104061</p>
-                <p>info@wanherfarmspvtltd.com</p>
+              <div className="text-xs sm:text-sm text-green-100 text-center mb-2 space-y-1">
+                <p>
+                  051-6104061 <br className="hidden sm:block" />
+                  info@wanherfarmspvtltd.com
+                </p>
               </div>
 
-              <div className="w-full hidden md:block border-t border-green-700   mt-4" />
+              <div className="w-full hidden md:block border-t border-green-700 mt-4" />
             </div>
           </div>
 
-          {/* DISCOVER/CATEGORY  &  LEGALS/SOCIAL — responsive groups */}
+          {/* DISCOVER/CATEGORY + LEGALS/SOCIAL */}
           <div className="flex flex-col md:flex-row justify-between items-start gap-y-8 md:gap-x-32 mb-12 mx-0 md:mx-24">
-            {/* LEFT GROUP — DISCOVER + CATEGORY */}
+            {/* LEFT GROUP */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-6 w-full md:w-auto">
               {/* DISCOVER */}
               <div>
@@ -100,7 +100,7 @@ export function Footer() {
               </div>
             </div>
 
-            {/* RIGHT GROUP — LEGALS + SOCIAL */}
+            {/* RIGHT GROUP */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-6 w-full md:w-auto">
               {/* LEGALS */}
               <div>
@@ -128,20 +128,9 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Big heading + footer legal row */}
-          <div >
-            <div className="mb-6 flex justify-center w-full">
-              <h2
-                className="font-extrabold tracking-tight text-white text-center"
-                style={{
-                  fontSize: "clamp(4rem, 12vw, 12rem)",
-                  lineHeight: 0.85,
-                  letterSpacing: "-0.015em",
-                }}
-              >
-                WANHER FARMS
-              </h2>
-            </div>
+          {/* Bottom section */}
+          <div>
+            <img src="/footer.png" className="mb-6" />
 
             <div className="flex flex-col md:flex-row justify-between items-center text-sm text-green-100 gap-y-2">
               <p>&copy; 2025 Wanher Farms</p>

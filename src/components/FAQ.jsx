@@ -58,7 +58,7 @@ export function FAQ({ layout = "twoThirds" }) {
     <section className="py-20 px-6 md:px-12 lg:px-24 bg-white">
       <div className="max-w-6xl mx-auto">
         <div className="flex items-center gap-2 text-gray-700 mb-6">
-          <Sprout className="w-5 h-5" />
+          <img src="/iconb.png" />
           <span className="text-sm font-medium">FAQ's</span>
         </div>
 
@@ -70,7 +70,7 @@ export function FAQ({ layout = "twoThirds" }) {
             </h2>
           </div>
 
-<div className={`${rightClass} space-y-6 pl-0 md:pl-20`}>
+          <div className={`${rightClass} space-y-6 pl-0 md:pl-4`}>
             {faqs.map((faq) => {
               const isOpen = openId === faq.id;
               return (
@@ -81,7 +81,7 @@ export function FAQ({ layout = "twoThirds" }) {
                     onClick={() => setOpenId(isOpen ? null : faq.id)}
                     aria-expanded={isOpen}
                     aria-controls={`faq-panel-${faq.id}`}
-                    className="w-full flex items-center justify-between py-4 text-left hover:opacity-90 transition-opacity focus:outline-none"
+                    className="w-full flex items-center justify-between my-4 text-left hover:opacity-90 transition-opacity focus:outline-none"
                   >
                     <span className="font-semibold text-gray-900">
                       {faq.id}. {faq.question}
@@ -98,7 +98,7 @@ export function FAQ({ layout = "twoThirds" }) {
                       }}
                       className="flex-shrink-0"
                     >
-                      <ChevronDown className="w-5 h-5 text-gray-600" />
+                 <img src="/ard.png"/>
                     </motion.span>
                   </button>
 

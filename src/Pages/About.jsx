@@ -113,7 +113,7 @@ export default function About() {
           {stats.map((s, i) => (
             <div key={i} className="bg-[#f4f2ef] p-10 rounded-lg">
               {/* Green Leaf Icon */}
-              <Sprout className="w-5 h-5 text-emerald-700 mb-4" />
+          <img src="/iconb.png" className="pb-4" />
 
               {/* Value */}
               <div className="text-4xl font-bold text-gray-900">{s.value}</div>

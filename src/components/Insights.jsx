@@ -1,5 +1,5 @@
-// src/components/Insights.jsx  (or wherever you keep this component)
-import React from "react";
+// src/components/Insights.jsx
+import React, { useState, useEffect } from "react";
 import { ArrowRight, Sprout } from "lucide-react";
 import blogData from "../data/blogData";
 
@@ -7,9 +7,18 @@ import blogData from "../data/blogData";
  * If some blog items don't include an image, this fallback path should
  * exist in public/, e.g. public/Home/fallback.png
  */
-const FALLBACK_IMAGE = "/Home/fallback.png";
+const FALLBACK_IMAGE = "/Home/bg-card.png";
 
 export function Insights() {
+  const [selectedSlug, setSelectedSlug] = useState(null);
+
+  // When selectedSlug changes, perform a hard navigation (full reload)
+  useEffect(() => {
+    if (!selectedSlug) return;
+    // Use window.location.assign so browser history behaves like a normal navigation
+    window.location.assign(`/blog/${selectedSlug}`);
+  }, [selectedSlug]);
+
   // Convert blogData into the shape the UI expects. Limit to first 5.
   const items = blogData.slice(0, 5).map((b, index) => ({
     id: index + 1,
@@ -25,7 +34,7 @@ export function Insights() {
       <div className="max-w-7xl mx-auto">
         {/* header */}
         <div className="flex items-center justify-center gap-2 text-gray-700 mb-6">
-          <Sprout className="w-5 h-5" />
+          <img src="/iconb.png" alt="Insights icon" />
           <span className="text-sm font-medium">Insights</span>
         </div>
 
@@ -43,12 +52,21 @@ export function Insights() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
           {/* LEFT FEATURE CARD — use the first item if exists */}
           {items[0] && (
-            <div className="lg:col-span-1 lg:row-span-2 lg:h-[720px] relative rounded-[24px] overflow-hidden group shadow-xl">
+            <div
+              role="button"
+              tabIndex={0}
+              onClick={() => items[0].slug && setSelectedSlug(items[0].slug)}
+              onKeyDown={(e) => {
+                if (e.key === "Enter") items[0].slug && setSelectedSlug(items[0].slug);
+              }}
+              className="lg:col-span-1 lg:row-span-2 lg:h-[720px] relative rounded-[24px] overflow-hidden group shadow-xl cursor-pointer"
+            >
               <img
                 src={items[0].image}
                 onError={(e) => (e.currentTarget.src = FALLBACK_IMAGE)}
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 alt={items[0].title}
+                loading="lazy"
               />
 
               <div className="absolute bottom-0 left-0 p-4">
@@ -65,13 +83,20 @@ export function Insights() {
             {items.slice(1).map((insight) => (
               <div
                 key={insight.id}
-                className="relative h-full rounded-[20px] overflow-hidden group shadow-lg"
+                role="button"
+                tabIndex={0}
+                onClick={() => insight.slug && setSelectedSlug(insight.slug)}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter") insight.slug && setSelectedSlug(insight.slug);
+                }}
+                className="relative h-full rounded-[20px] overflow-hidden group shadow-lg cursor-pointer"
               >
                 <img
                   src={insight.image}
                   onError={(e) => (e.currentTarget.src = FALLBACK_IMAGE)}
                   alt={insight.title}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  loading="lazy"
                 />
 
                 <div className="absolute bottom-0 left-0 p-5">
@@ -87,7 +112,10 @@ export function Insights() {
 
         {/* BUTTON */}
         <div className="flex justify-center">
-          <button className="border-2 border-green-700 text-green-700 px-8 py-3 rounded-full font-medium hover:bg-green-50 transition-all flex items-center gap-2">
+          <button
+            onClick={() => (window.location.href = "/blogs")}
+            className="cursor-pointer border-2 border-green-700 text-green-700 px-8 py-3 rounded-full font-medium hover:bg-green-50 transition-all flex items-center gap-2"
+          >
             Read more <ArrowRight className="w-4 h-4" />
           </button>
         </div>
@@ -95,3 +123,5 @@ export function Insights() {
     </section>
   );
 }
+
+export default Insights;

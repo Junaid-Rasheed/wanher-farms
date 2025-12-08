@@ -8,7 +8,7 @@ export default function QualitySection() {
 
       <div className="relative z-10 max-w-5xl mx-auto text-center">
         <div className="flex items-center justify-center gap-2 text-green-100 mb-6">
-          <Sprout className="w-5 h-5" />
+          <img src="/icon.png" />
           <span className="text-sm font-medium">Commitment to Quality</span>
         </div>
 
