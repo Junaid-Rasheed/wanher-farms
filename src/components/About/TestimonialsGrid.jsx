@@ -36,7 +36,7 @@ export default function TestimonialsGrid() {
 
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center gap-2 text-gray-700 mb-6">
-            <Sprout className="w-5 h-5" />
+          <img src="/iconb.png" />
             <span className="text-sm font-medium">Testimonials</span>
           </div>
 

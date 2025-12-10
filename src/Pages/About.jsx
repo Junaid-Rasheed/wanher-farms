@@ -163,6 +163,7 @@ export default function About() {
               rigorous standards of procurement, production, and quality
               assurance.
             </p>
+<a href="/contact">
 
             <div className="mt-6 sm:mt-8">
               <button className="inline-flex items-center gap-2 sm:gap-3 bg-[#1f6306] hover:bg-[#016630] px-4 sm:px-5 py-2 sm:py-2.5 rounded-full font-medium shadow">
@@ -170,6 +171,7 @@ export default function About() {
                 <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
               </button>
             </div>
+</a>
           </div>
         </div>
       </section>

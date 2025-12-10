@@ -178,16 +178,19 @@ export default function ProductDetail() {
                   </div>
 
                   {/* center aligned button resembling image 1 */}
+                  <a href="/contact">
+
                   <div className="flex-1 flex justify-center">
                     <motion.button
                       className="inline-flex items-center justify-center gap-3 px-8 py-2 bg-emerald-700 text-white rounded-full shadow hover:bg-emerald-600 transition w-full md:w-72"
                       whileTap={buttonTap.whileTap}
                       whileHover={buttonTap.whileHover}
                       aria-label={`Contact about Wanher Flour ${n}`}
-                    >
+                      >
                       Contact Us
                     </motion.button>
                   </div>
+                      </a>
                 </div>
               </div>
             </motion.article>

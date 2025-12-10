@@ -73,7 +73,7 @@ export default function HistorySection() {
       <div className="max-w-7xl mx-auto px-6 py-12  ">
         <div className="text-center mb-8">
           <p className="text-sm  mb-2 flex items-center justify-center gap-2">
-            <Sprout className="w-4 h-4" />
+          <img src="/iconb.png" />
             Our History
           </p>
 
@@ -110,7 +110,8 @@ export default function HistorySection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-stretch">
           {/* Dynamic content card */}
           <div className="bg-white p-8 rounded-lg shadow-sm h-full flex flex-col">
-            <Sprout className="w-6 h-6 text-[#1f6306] mb-4" />
+            {/* <Sprout className="w-6 h-6 text-[#1f6306] mb-4" /> */}
+          <img src="/iconb.png" className="w-4 mb-4" />
 
             {/* title pulled from contentByYear */}
             <h4 className={`${titleSizeClass} font-semibold mb-3`}>
