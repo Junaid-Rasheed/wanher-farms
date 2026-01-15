@@ -74,12 +74,12 @@ export default function Contactus() {
                 title="051-6104061"
                 subtitle="Mobile"
               />
-              <div className="border-t" />
-              <ContactRow
+         
+              {/* <ContactRow
                 icon={<Printer size={18} />}
                 title="888-652-7137"
                 subtitle="Fax"
-              />
+              /> */}
               <div className="border-t" />
               <ContactRow
                 icon={<Mail size={18} />}

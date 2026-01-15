@@ -5,72 +5,111 @@ import { motion } from "framer-motion";
 const testimonials = [
   {
     id: 1,
-    quote:
-      "Their team brings not only expertise but real care for the land and the farmers.",
-    author: "Lisa Rhouther",
-    initial: "L",
+    quote: "Excellent quality atta that makes very soft rotis with a great taste.",
+    author: "Ahmed Khan",
+    initial: "A",
     featured: true,
-    avatar:
-      "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200&q=80",
   },
-
+  {
+    id: 2,
+    quote: "Jawahir eggs are always fresh and very well packed.",
+    author: "Ayesha Malik",
+    initial: "A",
+    featured: false,
+  },
   {
     id: 3,
-    quote:
-      "Their team brings not only expertise but real care for the land and the farmers.",
-    author: "Lisa Rhouther",
-    initial: "L",
+    quote: "Basmati rice cooks perfectly every time, highly recommended.",
+    author: "Usman Ali",
+    initial: "U",
     featured: false,
   },
   {
     id: 4,
-    quote:
-      "Their team brings not only expertise but real care for the land and the farmers.",
-    author: "Lisa Rhouther",
-    initial: "L",
+    quote: "Consistent quality across all products, a very reliable brand.",
+    author: "Fatima Noor",
+    initial: "F",
     featured: false,
   },
   {
     id: 5,
-    quote:
-      "Their team brings not only expertise but real care for the land and the farmers.",
-    author: "Lisa Rhouther",
-    initial: "L",
+    quote: "Loved the natural aroma and smooth texture of the chakki atta.",
+    author: "Hassan Raza",
+    initial: "H",
     featured: false,
   },
   {
     id: 6,
-    quote:
-      "Their team brings not only expertise but real care for the land and the farmers.",
-    author: "Lisa Rhouther",
-    initial: "L",
+    quote: "Eggs are clean, hygienic, and properly graded.",
+    author: "Sana Iqbal",
+    initial: "S",
     featured: false,
   },
   {
     id: 7,
-    quote:
-      "Their team brings not only expertise but real care for the land and the farmers.",
-    author: "Lisa Rhouther",
-    initial: "L",
+    quote: "Rice grains are long, separate, and non-sticky after cooking.",
+    author: "Bilal Ahmed",
+    initial: "B",
     featured: false,
   },
   {
     id: 8,
-    quote:
-      "Their team brings not only expertise but real care for the land and the farmers.",
-    author: "Lisa Rhouther",
-    initial: "L",
+    quote: "Strong packaging keeps the product fresh and protected.",
+    author: "Nida Hussain",
+    initial: "N",
     featured: false,
   },
   {
     id: 9,
-    quote:
-      "Their team brings not only expertise but real care for the land and the farmers.",
-    author: "Lisa Rhouther",
-    initial: "L",
+    quote: "Great value for money with premium-quality products.",
+    author: "Saad Farooq",
+    initial: "S",
+    featured: false,
+  },
+  {
+    id: 10,
+    quote: "Taste and nutrition are both top-class.",
+    author: "Maryam Aslam",
+    initial: "M",
+    featured: false,
+  },
+  {
+    id: 11,
+    quote: "The atta feels pure and natural with no artificial smell.",
+    author: "Zain Abbas",
+    initial: "Z",
+    featured: false,
+  },
+  {
+    id: 12,
+    quote: "Egg yolks are rich in color and clearly very fresh.",
+    author: "Hira Shah",
+    initial: "H",
+    featured: false,
+  },
+  {
+    id: 13,
+    quote: "Perfect rice for both special occasions and daily use.",
+    author: "Kamran Siddiqui",
+    initial: "K",
+    featured: false,
+  },
+  {
+    id: 14,
+    quote: "Very satisfied with Jawahir food commodities overall.",
+    author: "Anum Khalid",
+    initial: "A",
+    featured: false,
+  },
+  {
+    id: 15,
+    quote: "The brand feels professional, trustworthy, and reliable.",
+    author: "Imran Qureshi",
+    initial: "I",
     featured: false,
   },
 ];
+
 
 export function Testimonials() {
   const containerRef = useRef(null);

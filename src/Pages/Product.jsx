@@ -5,15 +5,15 @@ import { motion } from "framer-motion";
 const products = [
   {
     slug: "chakki-atta",
-    title: "Chakki Atta (Wheat Flour)",
-    desc: "Stone-ground for maximum nutrition.",
+    title: "Jawahir Khalis Chakki Atta (Flour)",
+    desc: "Jawahir Khalis Chakki Atta is made from the most fertile and organically sourced pure wheat grains. It is processed in modern, hygienic grinding units to preserve its natural fiber, nutritional integrity, aroma, and authentic taste—ensuring maximum health benefits and superior quality in every serving.",
     img: "/Product/p1.png",
   },
   {
     slug: "grade-a-eggs",
     title: "Grade A Eggs",
-    desc: "Fresh, clean, carefully graded.",
-    img: "/Product/p2.png",
+    desc: "Jawahir Grade A Eggs are produced from the most trusted and reliable bird breeds, raised on high-quality, nutritionally balanced feed. Each egg is carefully sourced, graded as Category A, and packed under strict hygienic conditions to ensure freshness, safety, and maximum nutritional benefits.",
+    img: "/Product/egg.jpg",
   },
   {
     slug: "wheat-grains",
@@ -22,16 +22,13 @@ const products = [
     img: "/Product/p3.png",
   },
   {
-    slug: "pulses-staples",
-    title: "Pulses & Staples",
-    desc: "Our network of growers provides consistent, premium-quality pulses that meet both domestic/institutional needs.",
-    img: "/Product/p4.png",
+    slug: "kainat-rice",
+    title: "Jawahir Kainat Basmati Rice 1121",
+    desc: "Jawahir Kainat Basmati Rice 1121 is a premium long-grain basmati variety known for its extra-long length, aromatic fragrance, and fluffy texture after cooking. Carefully sourced from trusted farms and processed under stringent quality controls, this rice delivers exceptional taste, purity, and consistency—ideal for biryani, pulao, and everyday meals.",
+    img: "/Product/rice.jpeg",
   },
 ];
-// NOTE: per your request header/navigation is handled separately — this component only implements
-// the hero and product grid to match screenshots 3 & 4. Replace image paths as needed.
 
-// Framer motion variants (kept minimal so original styling isn't changed)
 const heroVariants = {
   hidden: { opacity: 0, y: 12 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.7 } },

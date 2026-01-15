@@ -100,7 +100,11 @@ export default function About() {
                 Wanher Farms Pvt. Ltd. is a vertically integrated procurement,
                 production, and distribution company dedicated to supplying
                 premium agricultural commodities to local and international
-                markets.
+                markets. Jawahir is a trusted name in food commodities,
+                committed to delivering high-quality, hygienically processed,
+                and nutritionally rich products. With strong sourcing standards
+                and modern infrastructure, we ensure excellence from farm to
+                consumer.
               </p>
             </div>
           </div>
@@ -113,7 +117,7 @@ export default function About() {
           {stats.map((s, i) => (
             <div key={i} className="bg-[#f4f2ef] p-10 rounded-lg">
               {/* Green Leaf Icon */}
-          <img src="/iconb.png" className="pb-4" />
+              <img src="/iconb.png" className="pb-4" />
 
               {/* Value */}
               <div className="text-4xl font-bold text-gray-900">{s.value}</div>
@@ -163,15 +167,14 @@ export default function About() {
               rigorous standards of procurement, production, and quality
               assurance.
             </p>
-<a href="/contact">
-
-            <div className="mt-6 sm:mt-8">
-              <button className="inline-flex items-center gap-2 sm:gap-3 bg-[#1f6306] hover:bg-[#016630] px-4 sm:px-5 py-2 sm:py-2.5 rounded-full font-medium shadow">
-                Let's work together{" "}
-                <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
-              </button>
-            </div>
-</a>
+            <a href="/contact">
+              <div className="mt-6 sm:mt-8">
+                <button className="inline-flex items-center gap-2 sm:gap-3 bg-[#1f6306] hover:bg-[#016630] px-4 sm:px-5 py-2 sm:py-2.5 rounded-full font-medium shadow">
+                  Let's work together{" "}
+                  <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
+                </button>
+              </div>
+            </a>
           </div>
         </div>
       </section>
