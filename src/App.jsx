@@ -10,6 +10,9 @@ import About from "./Pages/About";
 import Blog from "./Pages/Blog";
 import BlogDetail from "./Pages/BlogDetail";
 import Contactus from "./Pages/Contactus";
+import Certifications from "./Pages/Certifications";
+import TermsConditions from "./Pages/TermsConditions";
+import PrivacyPolicy from "./Pages/PrivacyPolicy";
 
 function Layout() {
   return (
@@ -33,6 +36,9 @@ function App() {
           <Route path="/blogs" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogDetail />} />
           <Route path="/contact" element={<Contactus />} />
+          <Route path="/certifications" element={<Certifications />} />
+          <Route path="/privacy" element={<PrivacyPolicy />} />
+          <Route path="/terms" element={<TermsConditions />} />
 
           {/* Add more pages here */}
         </Route>

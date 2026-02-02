@@ -1,112 +1,90 @@
 import React from "react";
-import { ArrowRight, Sprout } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+
+const steps = [
+  {
+    title: "Sourcing",
+    text: "We source crops directly from trusted local farmers, ensuring traceability and fair trade practices.",
+    variant: "light",
+  },
+  {
+    title: "Hygienic Processing",
+    text: "State-of-the-art facilities ensure clean, safe, and standardized processing at every stage.",
+    variant: "green",
+  },
+  {
+    title: "Quality Testing",
+    text: "Each batch undergoes rigorous quality and safety testing before approval.",
+    variant: "light",
+  },
+  {
+    title: "Packaging",
+    text: "Products are packaged using food-grade materials to preserve freshness and quality.",
+    variant: "dark",
+  },
+  {
+    title: "Distribution",
+    text: "A reliable logistics network ensures timely delivery across Pakistan and export regions.",
+    variant: "light",
+  },
+];
 
 export default function ProcessSection() {
   return (
-    <section className="py-20 px-6 md:px-12 lg:px-24 bg-gray-100">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid lg:grid-cols-3 gap-16 items-start">
-          
-          {/* LEFT SIDE — 1/3 WIDTH */}
-          <div className="lg:col-span-1 lg:self-start">
-            <div className="flex items-center gap-2 text-gray-700 mb-6">
+    <section className="py-24 px-6 md:px-12 bg-[#f6f5f2]">
+      <div className="max-w-7xl mx-auto text-center">
 
-          <img src="/iconb.png" />
-              <span className="text-sm font-medium">What We Do</span>
-            </div>
-
-            <h2 className="text-4xl md:text-5xl font-semibold mb-8 leading-tight">
-              Our Process / Supply Chain
-            </h2>
-
-            <p className="text-gray-700 leading-relaxed mb-8 ">
-              At Wanher Farms, we handle core agricultural commodities that
-              form the backbone of Pakistan's food economy. Each product
-              reflects our rigorous standards of procurement, production, and
-              quality assurance.
-            </p>
-<a href="/about">
-
-            <button className="border-2 border-green-700 text-green-700 px-8 py-3 rounded-full font-medium hover:bg-green-50 transition-all flex items-center gap-2">
-              Lets work together <ArrowRight className="w-4 h-4" />
-            </button>
-</a>
-          </div>
-
-          {/* RIGHT SIDE — 2/3 WIDTH */}
-          <div className="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {/* Item 1 */}
-            <div className="relative rounded-2xl overflow-hidden">
-              <img
-                src="/Home/s1.png"
-                className="w-full h-96 object-cover"
-              />
-              <div className="absolute inset-0 "></div>
-
-              <div className="absolute bottom-6 left-6 right-6 text-white">
-                <h3 className="text-2xl font-semibold mb-2">Procurement</h3>
-                <p className="text-sm">
-                  Our journey begins in the field, with trusted local farmers
-                  and growers. We source crops through direct partnerships,
-                  ensuring fair trade and traceability at every stage.
-                </p>
-              </div>
-            </div>
-
-            {/* Item 2 */}
-            <div className="relative rounded-2xl overflow-hidden">
-              <img
-                src="/Home/s2.png"
-                className="w-full h-96 object-cover"
-              />
-              <div className="absolute inset-0 "></div>
-
-              <div className="absolute bottom-6 left-6 right-6 text-white">
-                <h3 className="text-2xl font-semibold mb-2">Production</h3>
-                <p className="text-sm  ">
-                  Equipped with state-of-the-art milling, cleaning, and
-                  grading facilities, Wanher Farms ensures every commodity
-                  meets rigorous hygiene, consistency, and safety standards.
-                </p>
-              </div>
-            </div>
-
-            {/* Item 3 */}
-            <div className="relative rounded-2xl overflow-hidden">
-              <img
-                src="/Home/s3.png"
-                className="w-full h-96 object-cover"
-              />
-              <div className="absolute inset-0 "></div>
-
-              <div className="absolute bottom-6 left-6 right-6 text-white">
-                <h3 className="text-2xl font-semibold mb-2">Quality Assurance</h3>
-                <p className="text-sm ">
-                  Every batch undergoes multi-stage testing, from moisture and
-                  purity checks to nutritional profiling ensuring excellence.
-                </p>
-              </div>
-            </div>
-
-            {/* Item 4 */}
-            <div className="relative rounded-2xl overflow-hidden">
-              <img
-                src="/Home/s4.png"
-                className="w-full h-96 object-cover"
-              />
-              <div className="absolute inset-0 "></div>
-
-              <div className="absolute bottom-6 left-6 right-6 text-white">
-                <h3 className="text-2xl font-semibold mb-2">Distribution</h3>
-                <p className="text-sm ">
-                  With a robust logistics network, we ensure timely delivery
-                  across Pakistan and selected export regions.
-                </p>
-              </div>
-            </div>
-          </div>
-
+        {/* TOP LABEL */}
+        <div className="flex items-center justify-center gap-2 mb-6">
+          <img src="/iconb.png" className="w-5 h-5" />
+          <span className="text-sm font-medium text-gray-700">
+            What We Do
+          </span>
         </div>
+
+        {/* HEADING */}
+        <h2 className="text-4xl md:text-5xl font-semibold mb-6">
+          Our Process / Supply Chain
+        </h2>
+
+        {/* DESCRIPTION */}
+        <p className="max-w-3xl mx-auto text-gray-700 leading-relaxed mb-16">
+          At Wanher Farms, we handle core agricultural commodities that form the
+          backbone of Pakistan’s food economy. Each product reflects our rigorous
+          standards of procurement, production, and quality assurance.
+        </p>
+
+        {/* PROCESS CARDS */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 mb-16">
+          {steps.map((step, i) => {
+            const base =
+              "rounded-2xl p-8 min-h-[240px] flex flex-col text-left";
+            const variants = {
+              light: "bg-white text-gray-800",
+              green: "bg-green-800 text-white",
+              dark: "bg-black text-white",
+            };
+
+            return (
+              <div key={i} className={`${base} ${variants[step.variant]}`}>
+                <span className="inline-block text-sm px-4 py-1 rounded-full border border-current mb-6 w-fit">
+                  {step.title}
+                </span>
+                <p className="text-sm leading-relaxed opacity-90">
+                  {step.text}
+                </p>
+              </div>
+            );
+          })}
+        </div>
+
+        {/* CTA */}
+        <a href="/contact">
+          <button className="border-2 border-green-700 text-green-700 px-10 py-4 rounded-full font-medium hover:bg-green-50 transition-all inline-flex items-center gap-2">
+            Lets work together <ArrowRight className="w-4 h-4" />
+          </button>
+        </a>
+
       </div>
     </section>
   );

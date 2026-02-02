@@ -31,7 +31,7 @@ Email: ${formData.email}
 Sent from website contact form.`
     );
 
-    window.location.href = `mailto:openaiflaws@gmail.com?subject=${subject}&body=${body}`;
+window.location.href = `mailto:info@wanherfarmspvtltd.com?subject=${subject}&body=${body}`;
 
     // reset form
     setFormData({ firstName: "", lastName: "", email: "" });
