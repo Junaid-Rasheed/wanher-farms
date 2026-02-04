@@ -81,22 +81,23 @@ export default function HistorySection() {
             From humble roots to a global vision.
           </h3>
 
-          <div className="mt-6 flex justify-center gap-3">
-            {years.map((y) => (
-              <button
-                key={y}
-                onClick={() => setYear(y)}
-                aria-pressed={year === y}
-                className={`px-6 py-1 rounded-full text-sm transition-shadow duration-150 focus:outline-none focus:ring-2 focus:ring-emerald-600 ${
-                  year === y
-                    ? "bg-[#1f6306] text-white shadow"
-                    : "bg-white border border-gray-200"
-                }`}
-              >
-                {y}
-              </button>
-            ))}
-          </div>
+     <div className="mt-6 flex flex-wrap justify-center gap-3">
+  {years.map((y) => (
+    <button
+      key={y}
+      onClick={() => setYear(y)}
+      aria-pressed={year === y}
+      className={`px-6 py-1 rounded-full text-sm transition-shadow duration-150 focus:outline-none focus:ring-2 focus:ring-emerald-600 ${
+        year === y
+          ? "bg-[#1f6306] text-white shadow"
+          : "bg-white border border-gray-200"
+      }`}
+    >
+      {y}
+    </button>
+  ))}
+</div>
+
 
           <p className="mt-3 text-gray-600 max-w-3xl mx-auto">
             At Wanher Farms, we handle core agricultural commodities that form

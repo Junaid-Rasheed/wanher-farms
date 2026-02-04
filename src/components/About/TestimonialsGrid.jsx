@@ -59,7 +59,7 @@ export default function TestimonialsGrid() {
         {/* Grid Layout */}
         <div className="grid lg:grid-cols-3 gap-8">
           {/* LEFT HERO IMAGE */}
-          <div className="lg:col-span-1 lg:row-span-2 rounded-2xl overflow-hidden shadow-md h-[650px]">
+          <div className="lg:col-span-1 lg:row-span-2 rounded-2xl overflow-hidden shadow-md min-h-[400px] lg:min-h-[650px]">
             <img
               src="/About/Field2.png"
               alt="Hero"
@@ -69,11 +69,11 @@ export default function TestimonialsGrid() {
 
           {/* RIGHT 2x2 GRID */}
 
-          <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-8 h-[650px]">
+          <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-8 min-h-[400px] lg:min-h-[650px]">
             {cards.map((c, idx) => (
               <div
                 key={idx}
-                className={`${c.bg} rounded-xl p-6 shadow-sm h-[310px] flex flex-col`}
+                className={`${c.bg} rounded-xl p-6 shadow-sm min-h-[260px] flex flex-col`}
               >
                 {/* thumbnail above title */}
                 <div className="w-30 h-30 rounded-md overflow-hidden mb-4">
